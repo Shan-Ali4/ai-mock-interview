@@ -1,9 +1,9 @@
 import React from 'react'
 
-const DashboardLayout = ({}) => {
+const DashboardLayout = ({chidlren}) => {
   return (
     <div>
-      Dashboard Layout
+      {chidlren}
     </div>
   )
 }

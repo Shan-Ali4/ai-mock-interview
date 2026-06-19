@@ -1,6 +1,14 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs"
+import { Poppins } from "next/font/google";
+
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-poppins",
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,7 +32,7 @@ export default function RootLayout({ children }) {
         lang="en"
         className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
       >
-        <body className="min-h-full flex flex-col">{children}</body>
+        <body className={`${poppins.className}"min-h-full flex flex-col"`}>{children}</body>
       </html>
 
     </ClerkProvider>

@@ -1,9 +1,11 @@
 import React from 'react'
+import Header from './_components/Header'
 
-const DashboardLayout = ({chidlren}) => {
+function DashboardLayout ({children})  {
   return (
     <div>
-      {chidlren}
+      <Header/>
+      {children}
     </div>
   )
 }
